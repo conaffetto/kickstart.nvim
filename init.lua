@@ -85,8 +85,14 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
 
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
+
+
+-- Enable mouse mode, can be useful for resizing splits for example!
+vim.opt.mouse = 'a'
+
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -101,8 +107,6 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
--- Save undo history
-vim.opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -184,7 +188,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- [[ Install `lazy.nvim` plugin manager ]]
+-- [[ Install `lazy.nvim` plugin manager ]] - *YOYO NOTE: THE FOLLOWING BLOCK IS ALREADY IN MY init.lua ! 
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.uv.fs_stat(lazypath) then
