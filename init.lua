@@ -119,10 +119,6 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 
--- Show which line your cursor is on
-vim.opt.cursorline = true
-
-
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
