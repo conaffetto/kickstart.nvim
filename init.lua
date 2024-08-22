@@ -99,10 +99,6 @@ vim.g.have_nerd_font = false
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
-
--- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
-
 -- Decrease update time
 vim.opt.updatetime = 250
 
