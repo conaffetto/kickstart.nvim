@@ -84,29 +84,17 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
-
-
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
-
-
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
-
--- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
-
 -- Decrease update time
 vim.opt.updatetime = 250
-
 
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
-
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -114,10 +102,8 @@ vim.opt.timeoutlen = 300
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
-
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -130,12 +116,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
-
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
-
--- [[ Install `lazy.nvim` plugin manager ]] - *YOYO NOTE: THE FOLLOWING BLOCK IS ALREADY IN MY init.lua ! 
+-- [[ Install `lazy.nvim` plugin manager ]] - *YOYO NOTE: THE FOLLOWING BLOCK IS ALREADY IN MY init.lua !
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.uv.fs_stat(lazypath) then
